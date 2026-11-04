@@ -83,6 +83,13 @@ summary{font-weight:700;cursor:pointer}
 footer{padding:28px 0 48px;color:var(--muted);font-size:15px}
 footer a{color:var(--navy)}
 .scroll{overflow-x:auto}
+.bar{display:none}
+@media (max-width:760px){
+  body{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+  .bar{display:flex;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:10;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:var(--bg);border-top:1px solid var(--line)}
+  .bar a{flex:1;text-align:center;text-decoration:none;font-weight:700;border-radius:10px;padding:13px 6px;font-size:16px;background:#1F3A68;color:#fff}
+  .bar a.kakao{background:#FEE500;color:#191919}
+}
 </style>
 </head>
 <body>
@@ -180,7 +187,7 @@ footer a{color:var(--navy)}
       <li><b>여러 렌탈사 제품을 함께 비교</b>해 드립니다. (코웨이, SK매직, LG퓨리케어, 청호나이스, 쿠쿠 등)</li>
       <li>월 요금과 <b>계약 기간 총 납부액</b>을 계약 전에 계산해 드립니다.</li>
       <li>약정, 계약 기간, <b>끝날 때 비용</b>을 계약 전에 정리해서 알려 드립니다.</li>
-      <li>접수에 필요한 정보는 <b>동의를 받고 렌탈사 접수에만</b> 씁니다. 접수가 끝나면 저희 쪽 기록은 바로 지웁니다.</li>
+      <li>접수에 필요한 정보는 <b>동의를 받고</b> 렌탈사 접수에 씁니다. 카드·계좌 같은 자동이체 정보는 전달한 뒤 바로 지웁니다. 나중에 다시 안내를 드리는 일은 <b>따로 동의하신 분께만</b> 합니다.</li>
     </ol>
     <div class="warn">
       <p><b>렌탈을 권하지 않을 때도 있습니다.</b> 1년 안에 이사 계획이 있으시거나 매달 요금이 부담되실 것 같으면 솔직하게 말씀드립니다. 중간에 해지하면 고객님도 손해니까요.</p>
@@ -205,9 +212,10 @@ footer a{color:var(--navy)}
     <p>만족렌탈 (이룸컴퍼니) · 렌탈 상담 010-2448-8245 · 카카오톡 채널 "만족렌탈"<br>
     에어컨 설치·이전설치·청소는 <a href="https://1wone212-glitch.github.io/manjok-aircon/">만족에어컨</a> (1600-5375)<br>
     렌탈 계약의 당사자는 각 렌탈사이며, 요금·약정·철거비 등 조건은 렌탈사와 상품에 따라 다릅니다.<br>
-    최종 수정 2026년 11월 2일</p>
+    최종 수정 2026년 11월 4일</p>
   </div>
 </footer>
+<nav class="bar" aria-label="빠른 상담"><a class="kakao" href="http://pf.kakao.com/_wxaaWX/chat">카톡 상담</a><a href="tel:01024488245">전화 상담</a></nav>
 
 <script>
 (function(){
